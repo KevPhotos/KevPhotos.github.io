@@ -1,0 +1,39 @@
+@font-face {
+	font-family: "PM";
+	src: url("PermanentMarker-Regular.ttf")format("truetype");
+}
+
+@font-face {
+	font-family: "SBlack";
+	src: url("SansitaSwashed-Black.ttf")format("truetype");
+}
+
+@font-face {
+	font-family: "SBold";
+	src: url("SansitaSwashed-Bold.ttf")format("truetype");
+}
+
+@font-face {
+	font-family: "SEB";
+	src: url("SansitaSwashed-ExtraBold.ttf")format("truetype");
+}
+
+@font-face {
+	font-family: "SL";
+	src: url("SansitaSwashed-Light.ttf")format("truetype");
+}
+
+@font-face {
+	font-family: "SM";
+	src: url("SansitaSwashed-Medium.ttf")format("truetype");
+}
+
+@font-face {
+	font-family: "SR";
+	src: url("SansitaSwashed-Regular.ttf")format("truetype");
+}
+
+@font-face {
+	font-family: "SSB";
+	src: url("SansitaSwashed-SemiBold.ttf")format("truetype");
+}

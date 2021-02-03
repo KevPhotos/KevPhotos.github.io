@@ -1,4 +1,2 @@
-# KevPhotos.github.io
-Portfolio book to Kevin Guillaume.
-
-[Portfolio Link](https://kevphotos.github.io)
+# Kev__Photos
+Portfolio to Kevin Guillaume - Photographe
