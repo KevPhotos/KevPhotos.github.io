@@ -38,7 +38,7 @@ $(document).ready(function () {
       });
       setTimeout(function(){
          $('#modal_nav').removeClass('hiden_modal');
-      }, 5000);
+      }, 10000);
    }
 
    // MODAL
@@ -63,14 +63,14 @@ $(document).ready(function () {
          if (anchor.length) {
             $("html, body").animate({
                scrollTop: anchor.offset().top
-            }, 0);
+            }, 1000);
          }
       }
    });
 
    // HOME BACKGROUND CAROUSEL
    const home_container = document.getElementById("home");
-   const pictures = [
+   const pictures_home = [
       "assets/img/home2.jpg",
       "assets/img/home3.jpg",
       "assets/img/home.jpg",
@@ -83,7 +83,23 @@ $(document).ready(function () {
       ))
       setTimeout(() => backgroundSlide(images, container, step), step * images.length)
    }
-   backgroundSlide(pictures, home_container, 5000);
+   backgroundSlide(pictures_home, home_container, 5000);
+
+   // BIOGRAPHIE PICTURES SLIDE
+   const biographie_img = document.getElementById("bio_img");
+   const pictures_biographie = [
+      "assets/img/kev__photos_2.jpg",
+      "assets/img/kev__photos.jpg",
+   ]
+   const imgSlide = (images, container, step) => {
+      images.forEach((image, index) => (
+         setTimeout(() => {
+            container.setAttribute("src", `${image}`); 
+         }, step * (index + 1))
+      ))
+      setTimeout(() => imgSlide(images, container, step), step * images.length)
+   }
+   imgSlide(pictures_biographie, biographie_img, 5000);
 
    // SCROLL-UP BUTTON
    $(window).scroll(function () {
@@ -99,7 +115,7 @@ $(document).ready(function () {
       e.preventDefault();
       $('html, body').animate({
          scrollTop: $($('#biographie')).offset().top
-      }, 0, 'linear');
+      }, 1000, 'linear');
    });
 
    // JS ANIMATION

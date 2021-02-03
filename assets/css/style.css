@@ -156,6 +156,7 @@ nav>ul>div.flex_end {
   -ms-display: flex;
   display: flex;
   justify-content: flex-end;
+  padding-right: 2.5em;
 }
 
 nav>ul>div.nav_link>li {
@@ -250,7 +251,7 @@ nav>ul>div.nav_link>li>a.active:hover {
   padding: 0;
   position: absolute;
   right: 15px;
-  top: -30%;
+  top: -25%;
 }
 
 .close:hover,
@@ -433,30 +434,31 @@ div#home>div>span#scroll_button>a>span:nth-of-type(3) {
 /* ***************************** */
 
 div#biographie {
-  height: 60vh;
+  height: 35em;
   background-color: #f6f6f6;
 }
 
-div#biographie>div>h2 {
+div#biographie>h2 {
   text-align: center;
   padding-top: 2em;
   font-size: 3em;
   margin: 0;
 }
 
-div#biographie>div>hr {
+div#biographie>h2>span{
   border-bottom: 2px solid rgb(255, 208, 0);
-  margin: 1em 32vw;
 }
 
-div#biographie>div>div {
+div#biographie>div>div.row {
   display: flex;
   justify-content: center;
   text-align: center;
+  margin-top: 4em;
 }
 
 div#biographie>div>div>div#biographie_content {
   height: 18em;
+  padding: 0 5em;
 }
 
 div#biographie>div>div>div#biographie_content>div {
@@ -480,6 +482,7 @@ div#biographie>div>div>div#biographie_content>div>small {
 }
 
 div#biographie>div>div>div#biographie_img {
+  padding: 0 5em;
   position: relative;
   display: flex;
   justify-content: center;
@@ -511,8 +514,7 @@ div#biographie>div>div>div#biographie_img>div>img {
   width: 18em;
   border-radius: 50%;
   object-fit: cover;
-  position: absolute;
-  left: 0;
+  transition: all 0.3s ease;
 }
 
 /* ***************************** */
@@ -530,7 +532,7 @@ div#second_home_picture {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 40vh;
+  height: 30em;
   background-attachment: fixed;
 }
 
@@ -579,6 +581,7 @@ footer>div>div>div {
   -ms-display: flex;
   display: flex;
   justify-content: center;
+  margin-bottom: 1.5em;
 }
 
 footer>div>div>div>a {
@@ -847,20 +850,38 @@ footer>div>div>div>a>img:hover {
 @media screen and (max-width: 766px) {
 
   /* ***************************** */
+  /* LOADER */
+  /* ***************************** */
+
+  #preloader>p {
+    font-size: 1.2em;
+  }
+
+  /* ***************************** */
+  /* END LOADER */
+  /* ***************************** */
+
+  /* ***************************** */
   /* BIOGRAPHIE */
   /* ***************************** */
 
   div#biographie {
-    height: 100vh;
+    height: 105vh;
   }
 
   div#biographie>div>div>div#biographie_content{
     margin-bottom: 3em;
+    padding: 0 2em;
+  }
+
+  div#biographie>div>div>div#biographie_content>div>p {
+    margin: 0 1.5em;
   }
 
   div#biographie>div>div>div#biographie_img{
     display: flex;
     justify-content: center;
+    padding: 0 2em;
   }
 
   div#biographie>div>div>div#biographie_img>div.circles>.circle {
@@ -883,7 +904,7 @@ footer>div>div>div>a>img:hover {
   /* ***************************** */
 
   div#second_home_picture {
-    height: 50vh;
+    height: 25em;
   }
 
   /* ***************************** */
@@ -905,7 +926,7 @@ footer>div>div>div>a>img:hover {
     text-align: center;
     border-right: 2px solid rgba(255, 255, 255, 0.877);
     border-bottom: 0;
-    background-color: rgba(31, 27, 27, 0.801);
+    background-color:  rgb(56, 56, 56);
     left: -1000px;
     display: block;
   }
@@ -933,7 +954,7 @@ footer>div>div>div>a>img:hover {
   }
 
   nav>ul>div.nav_link>li {
-    padding: 5px 0;
+    padding: 10px 0;
     display: block;
   }
 
@@ -941,9 +962,8 @@ footer>div>div>div>a>img:hover {
     font-size: 20px;
   }
 
-  nav:hover {
-    background-color: rgba(31, 27, 27, 0.801);
-    transition: all .5s ease;
+  nav>ul>div.flex_end {
+    padding: 0;
   }
 
   /* ***************************** */
@@ -957,7 +977,6 @@ footer>div>div>div>a>img:hover {
   footer>div>div>div>a{
     font-size: 42px;
     padding: 0 20px;
-    margin-bottom: .5em;
   }
   
   /* ***************************** */
