@@ -1,13 +1,10 @@
 $(document).ready(function () {
 
+   "use strict";
+
    // Initiate JS animate scroll screen
    AOS.init({
       once: true
-   });
-
-   // LOADER
-   window.addEventListener("load", function (event) {
-      $('#preloader').fadeOut('slow');
    });
 
    // NAVBAR
@@ -21,22 +18,26 @@ $(document).ready(function () {
       });
    }
    if (window.matchMedia("(max-width: 720px)").matches) {
+
       document.addEventListener('swiped-right', function () {
          $('nav').animate({
             left: '0'
          });
       });
+
       $('nav').click(function () {
          $('nav').animate({
             left: '-1000px'
          });
       });
+
       document.addEventListener('swiped-left', function () {
          $('nav').animate({
             left: '-1000px'
          });
       });
-      setTimeout(function(){
+
+      setTimeout(function () {
          $('#modal_nav').removeClass('hiden_modal');
       }, 10000);
    }
@@ -71,9 +72,9 @@ $(document).ready(function () {
    // HOME BACKGROUND CAROUSEL
    const home_container = document.getElementById("home");
    const pictures_home = [
-      "assets/img/home2.jpg",
-      "assets/img/home3.jpg",
-      "assets/img/home.jpg",
+      "assets/img/models/kevinGuillaume/kev__photos.jpg",
+      "assets/img/models/romainGuitton/romainG-8.jpg",
+      "assets/img/models/anneLise/anneLiseMin2.jpg",
    ]
    const backgroundSlide = (images, container, step) => {
       images.forEach((image, index) => (
@@ -86,20 +87,12 @@ $(document).ready(function () {
    backgroundSlide(pictures_home, home_container, 5000);
 
    // BIOGRAPHIE PICTURES SLIDE
-   const biographie_img = document.getElementById("bio_img");
+   const biographie_container = document.getElementById("img_bio");
    const pictures_biographie = [
-      "assets/img/kev__photos_2.jpg",
-      "assets/img/kev__photos.jpg",
+      "assets/img/models/kevinGuillaume/kev__photos.jpg",
+      "assets/img/models/kevinGuillaume/kev__photos_2.jpg",
    ]
-   const imgSlide = (images, container, step) => {
-      images.forEach((image, index) => (
-         setTimeout(() => {
-            container.setAttribute("src", `${image}`); 
-         }, step * (index + 1))
-      ))
-      setTimeout(() => imgSlide(images, container, step), step * images.length)
-   }
-   imgSlide(pictures_biographie, biographie_img, 5000);
+   backgroundSlide(pictures_biographie, biographie_container, 5000);
 
    // SCROLL-UP BUTTON
    $(window).scroll(function () {
@@ -123,3 +116,99 @@ $(document).ready(function () {
    $('#scroll_button').fadeOut().delay(2000).fadeIn(1500);
 
 });
+
+// STOP MOUSE CLICK
+$(document).bind('contextmenu', function(e) {
+   e.stopPropagation();
+   e.preventDefault();
+   e.stopImmediatePropagation();
+   return false;
+});
+
+// MODELS CAROUSEL
+(function () {
+   "use strict";
+
+   var carousel = document.getElementsByClassName('carousel')[0],
+      slider = carousel.getElementsByClassName('carousel_slider')[0],
+      items = carousel.getElementsByClassName('carousel_slider_item'),
+      prevBtn = carousel.getElementsByClassName('carousel_prev')[0],
+      nextBtn = carousel.getElementsByClassName('carousel_next')[0];
+
+   var width, height, totalWidth, margin = 20,
+      currIndex = 0,
+      interval, intervalTime = 4000;
+
+   function init() {
+      resize();
+      move(Math.floor(items.length / 2));
+      bindEvents();
+
+      timer();
+   }
+
+   function resize() {
+      width = Math.max(window.innerWidth * .25, 275),
+         height = window.innerHeight * .5,
+         totalWidth = width * items.length;
+
+      slider.style.width = totalWidth + "px";
+
+      for (var i = 0; i < items.length; i++) {
+         let item = items[i];
+         item.style.width = (width - (margin * 2)) + "px";
+         item.style.height = height + "px";
+      }
+   }
+
+   function move(index) {
+
+      if (index < 1) index = items.length;
+      if (index > items.length) index = 1;
+      currIndex = index;
+
+      for (var i = 0; i < items.length; i++) {
+         let item = items[i],
+            box = item.getElementsByClassName('item_3d-frame')[0];
+         if (i == (index - 1)) {
+            item.classList.add('carousel_slider_item--active');
+            box.style.transform = "perspective(1200px)";
+         } else {
+            item.classList.remove('carousel_slider_item--active');
+            box.style.transform = "perspective(1200px) rotateY(" + (i < (index - 1) ? 40 : -40) + "deg)";
+         }
+      }
+
+      slider.style.transform = "translate3d(" + ((index * -width) + (width / 2) + window.innerWidth / 2) + "px, 0, 0)";
+   }
+
+   function timer() {
+      clearInterval(interval);
+      interval = setInterval(() => {
+         move(++currIndex);
+      }, intervalTime);
+   }
+
+   function prev() {
+      move(--currIndex);
+      timer();
+   }
+
+   function next() {
+      move(++currIndex);
+      timer();
+   }
+
+   function bindEvents() {
+      window.onresize = resize;
+      prevBtn.addEventListener('click', () => {
+         prev();
+      });
+      nextBtn.addEventListener('click', () => {
+         next();
+      });
+   }
+
+   init();
+
+})();

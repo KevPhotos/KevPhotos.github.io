@@ -11,8 +11,8 @@
         content="Bienvenue sur mon book en ligne. Venez découvrir les réalisations de Kev__Photos !">
     <meta property="og:title" content="BOOK KEV__PHOTOS">
     <meta property="og:type" content="Website">
-    <meta property="og:url" content="http://kev__photos.github.io/">
-    <meta property="og:image" content="http://kev__photos.github.io/assets/img/???">
+    <meta property="og:url" content="https://kev__photos.github.io/">
+    <meta property="og:image" content="https://kev__photos.github.io/assets/img/logo_Kev__Photos-w.png">
     <meta property="og:description"
         content="Bienvenue sur mon book en ligne. Venez découvrir les réalisations de Kev__Photos !">
     <meta property="og:locale" content="fr_FR">
@@ -20,10 +20,10 @@
     <meta name="copyright" content="Tous droits réservés à Romain Gailliard">
 
     <!-- CANONICAL -->
-    <link rel="canonical" href="http://kev__photos.github.io" />
+    <link rel="canonical" href="https://kev__photos.github.io" />
 
     <!-- LOGO -->
-    <link rel="icon" href="assets/img/favicon.ico">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/png">
 
     <!-- TITLE -->
     <title>Kev__Photos</title>
@@ -31,7 +31,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/aos.min.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -40,18 +40,7 @@
 
 </head>
 
-<body>
-
-    <!-- LOADER -->
-    <div id="preloader">
-        <div class="ellipse">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <p>Photos en cours d'impression ...</p>
-    </div>
+<body ondragstart="return false;" ondrop="return false;">
 
     <!-- SCROLL-UP BUTTON -->
     <span id="back_top" title="Haut de page"><a href="#home"><i class="fa fa-angle-double-up"></i></a></span>
@@ -60,15 +49,14 @@
     <nav class="container-fluid">
         <ul class="row">
             <div class="col-lg-4 col-12 flex_start nav_header">
-                <li><a href="#home"><img src="assets/img/logo_Kev__Photos-w.png" alt="logo Kev__Photos" title="Haut de page"></a></li>
+                <li><a href="#home"><img src="assets/img/logo_Kev__Photos-w.png" alt="logo Kev__Photos"
+                            title="Haut de page"></a></li>
             </div>
             <div class="col-lg-8 col-12 flex_end nav_link">
-                    <li><a href="#home" class="active">Accueil</a></li>
-                    <li><a href="#project_block">Homme</a></li>
-                    <li><a href="#training">Femmes</a></li>
-                    <li><a href="#skills">Studio</a></li>
-                    <li><a href="#projects">Urban</a></li>
-                    <li><a href="#services">Kev__Photos</a></li>
+                <li><a href="#home" class="active">Accueil</a></li>
+                <li><a href="#biographie">Qui suis-je ?</a></li>
+                <li><a href="#categories">Catégories</a></li>
+                <li><a href="#models">Modèles</a></li>
             </div>
         </ul>
     </nav>
@@ -78,7 +66,8 @@
         <div class="modal-content">
             <p class="close">&times;</p>
             <img src="assets/img/swipe.gif" alt="gif swipe">
-            <h5>Pour afficher la barre de navigation veuillez swiper de gauche à droite. <br>(à partir du milieu de votre écran)</h5>
+            <h5>Pour afficher la barre de navigation veuillez swiper de gauche à droite. <br>(à partir du milieu de
+                votre écran)</h5>
         </div>
     </div>
 
@@ -97,12 +86,15 @@
 
     <!-- BIOGRAPHIE -->
     <div id="biographie">
-        <h2 data-aos="zoom-out" data-aos-duration="1500"><span>Qui suis-je ?</span></h2>
+        <h2 data-aos="fade-right" data-aos-duration="1500"><span>Qui suis-je ?</span></h2>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-md-6" id="biographie_content" data-aos="fade-up" data-aos-duration="1500">
                     <div>
-                        <p>" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla aut illum aliquam ea, vero quas facilis assumenda neque inventore officiis quisquam? Sint sequi facere enim itaque magni aut, veritatis fugiat. "</p>
+                        <p>" Je m'appelle Kévin Guillaume, je suis un photographe amateur blaisois. Passionné et curieux
+                            de découvrir, de comprendre, d'apprendre, et de maîtriser les possibilités que nous offre ce
+                            milieu. J'ai envie au travers de mes photos de partager avec vous les émotions, les
+                            différentes sensibilités qui me transportent lorsque je suis derrière mon appareil. "</p>
                         <br>
                         <i>Kevin Guillaume</i>
                         <br>
@@ -113,7 +105,7 @@
                     <div class="circles">
                         <div class="circle"></div>
                         <div class="circle"></div>
-                        <img src="assets/img/kev__photos.jpg" id="bio_img" alt="Kev__Photos">
+                        <div id="img_bio"></div>
                     </div>
                 </div>
             </div>
@@ -131,37 +123,226 @@
     </div>
 
     <!-- CATEGORIES -->
+    <div class="categories container-fluid" id="categories">
+        <h2 data-aos="fade-down" data-aos-duration="1500"><span>Catégories</span></h2>
+        <div class="card-grid row" data-aos="zoom-in-down" data-aos-duration="1500">
+            <a class="card col-lg-3 col-md-6 col-12" href="pages/categories/artistic.html">
+                <div class="card__background" style="background-image: url(assets/img/models/anthonyY/anthonyY\ \(1\)-min.jpg)">
+                </div>
+                <div class="card__content">
+                    <h3 class="card__heading">Artistique</h3>
+                </div>
+            </a>
+            <a class="card col-lg-3 col-md-6 col-12" href="pages/categories/natural.html">
+                <div class="card__background"
+                    style="background-image: url(assets/img/models/romainGuitton/romainG-2.jpg)">
+                </div>
+                <div class="card__content">
+                    <h3 class="card__heading">Nature</h3>
+                </div>
+            </a>
+            <a class="card col-lg-3 col-md-6 col-12" href="pages/categories/urban.html">
+                <div class="card__background" style="background-image: url(assets/img/models/baptisteM/baptisteM\ \(4\).jpg)">
+                </div>
+                <div class="card__content">
+                    <h3 class="card__heading">Urban</h3>
+                </div>
+            </a>
+            <a class="card col-lg-3 col-md-6 col-12" href="pages/categories/studio.html">
+                <div class="card__background"
+                    style="background-image: url(assets/img/models/kevinGuillaume/kev_studio.jpg)">
+                </div>
+                <div class="card__content">
+                    <h3 class="card__heading">Studio</h3>
+                </div>
+            </a>
+        </div>
+    </div>
 
     <!-- MODELS -->
+    <section class="models container-fluid" id="models">
+        <h5 data-aos="fade-up" data-aos-duration="1500"><span>Les modèles</span></h5>
+        <div class="carousel" data-aos="zoom-in-up" data-aos-duration="1500">
+            <div class="carousel_body">
+                <div class="carousel_prev"><i class="fa fa-angle-left"></i></div>
+                <div class="carousel_next"><i class="fa fa-angle-right"></i></div>
+                <div class="carousel_slider">
+                    <div class="carousel_slider_item">
+                        <div class="item_3d-frame">
+                            <div class="item_3d-frame_box item_3d-frame_box--front">
+                                <a href="pages/models/maximeD/maximeD.html">
+                                    <img src="assets/img/models/maximeD/maximeD (2).jpg" alt="model photo">
+                                    <p>Maxime-D</p>
+                                </a>
+                            </div>
+                            <div class="item_3d-frame_box item_3d-frame_box--left"></div>
+                            <div class="item_3d-frame_box item_3d-frame_box--right"></div>
+                        </div>
+                    </div>
+                    <div class="carousel_slider_item">
+                        <div class="item_3d-frame">
+                            <div class="item_3d-frame_box item_3d-frame_box--front">
+                                <a href="pages/models/anneLise/anneLise.html">
+                                    <img src="assets/img/models/anneLise/anneLiseMin2.jpg" alt="model photo">
+                                    <p>Anne-Lise</p>
+                                </a>
+                            </div>
+                            <div class="item_3d-frame_box item_3d-frame_box--left"></div>
+                            <div class="item_3d-frame_box item_3d-frame_box--right"></div>
+                        </div>
+                    </div>
+                    <div class="carousel_slider_item">
+                        <div class="item_3d-frame">
+                            <div class="item_3d-frame_box item_3d-frame_box--front">
+                                <a href="pages/models/romainGa/romainGa.html">
+                                    <img src="assets/img/models/romainGa/romain (7).jpg" alt="model photo">
+                                    <p>Romain-G</p>
+                                </a>
+                            </div>
+                            <div class="item_3d-frame_box item_3d-frame_box--left"></div>
+                            <div class="item_3d-frame_box item_3d-frame_box--right"></div>
+                        </div>
+                    </div>
+                    <div class="carousel_slider_item">
+                        <div class="item_3d-frame">
+                            <div class="item_3d-frame_box item_3d-frame_box--front">
+                                <a href="pages/models/kevinG/kevinG.html">
+                                    <img src="assets/img/models/kevinGuillaume/kev__photos.jpg" alt="model photo">
+                                    <p>Kevin Guillaume</p>
+                                </a>
+                            </div>
+                            <div class="item_3d-frame_box item_3d-frame_box--left"></div>
+                            <div class="item_3d-frame_box item_3d-frame_box--right"></div>
+                        </div>
+                    </div>
+                    <div class="carousel_slider_item">
+                        <div class="item_3d-frame">
+                            <div class="item_3d-frame_box item_3d-frame_box--front">
+                                <a href="pages/models/romainG/romainG.html#">
+                                    <img src="assets/img/models/romainGuitton/romainG-1.jpg" alt="model photo">
+                                    <p>Romain-G</p>
+                                </a>
+                            </div>
+                            <div class="item_3d-frame_box item_3d-frame_box--left"></div>
+                            <div class="item_3d-frame_box item_3d-frame_box--right"></div>
+                        </div>
+                    </div>
+                    <div class="carousel_slider_item">
+                        <div class="item_3d-frame">
+                            <div class="item_3d-frame_box item_3d-frame_box--front">
+                                <a href="pages/models/anthonyY/anthonyY.html">
+                                    <img src="assets/img/models/anthonyY/anthonyY (3)-min.jpg" alt="model photo">
+                                    <p>Anthony-Y</p>
+                                </a>
+                            </div>
+                            <div class="item_3d-frame_box item_3d-frame_box--left"></div>
+                            <div class="item_3d-frame_box item_3d-frame_box--right"></div>
+                        </div>
+                    </div>
+                    <div class="carousel_slider_item">
+                        <div class="item_3d-frame">
+                            <div class="item_3d-frame_box item_3d-frame_box--front">
+                                <a href="pages/models/baptisteM/baptisteM.html">
+                                    <img src="assets/img/models/baptisteM/baptisteM (1).jpg" alt="model photo">
+                                    <p>Baptiste-M</p>
+                                </a>
+                            </div>
+                            <div class="item_3d-frame_box item_3d-frame_box--left"></div>
+                            <div class="item_3d-frame_box item_3d-frame_box--right"></div>
+                        </div>
+                    </div>
+                    <div class="carousel_slider_item">
+                        <div class="item_3d-frame">
+                            <div class="item_3d-frame_box item_3d-frame_box--front">
+                                <a href="pages/models/edwinN/edwinN.html">
+                                    <img src="assets/img/models/edwinN/edwinN (1).jpg" alt="model photo">
+                                    <p>Edwin-N</p>
+                                </a>
+                            </div>
+                            <div class="item_3d-frame_box item_3d-frame_box--left"></div>
+                            <div class="item_3d-frame_box item_3d-frame_box--right"></div>
+                        </div>
+                    </div>
+                    <div class="carousel_slider_item">
+                        <div class="item_3d-frame">
+                            <div class="item_3d-frame_box item_3d-frame_box--front">
+                                <a href="pages/models/elsaT/elsaT.html">
+                                    <img src="assets/img/models/elsaT/elsaT (1).jpg" alt="model photo">
+                                    <p>Elsa-T</p>
+                                </a>
+                            </div>
+                            <div class="item_3d-frame_box item_3d-frame_box--left"></div>
+                            <div class="item_3d-frame_box item_3d-frame_box--right"></div>
+                        </div>
+                    </div>
+                    <div class="carousel_slider_item">
+                        <div class="item_3d-frame">
+                            <div class="item_3d-frame_box item_3d-frame_box--front">
+                                <a href="pages/models/evanB/evanB.html">
+                                    <img src="assets/img/models/evanB/evanB (1).jpg" alt="model photo">
+                                    <p>Evan-B</p>
+                                </a>
+                            </div>
+                            <div class="item_3d-frame_box item_3d-frame_box--left"></div>
+                            <div class="item_3d-frame_box item_3d-frame_box--right"></div>
+                        </div>
+                    </div>
+                    <div class="carousel_slider_item">
+                        <div class="item_3d-frame">
+                            <div class="item_3d-frame_box item_3d-frame_box--front">
+                                <a href="pages/models/franciscoC/franciscoC.html">
+                                    <img src="assets/img/models/franciscoC/franciscoC (5).jpg" alt="model photo">
+                                    <p>Francisco-C</p>
+                                </a>
+                            </div>
+                            <div class="item_3d-frame_box item_3d-frame_box--left"></div>
+                            <div class="item_3d-frame_box item_3d-frame_box--right"></div>
+                        </div>
+                    </div>
+                    <div class="carousel_slider_item">
+                        <div class="item_3d-frame">
+                            <div class="item_3d-frame_box item_3d-frame_box--front">
+                                <a href="pages/models/marioM/marioM.html">
+                                    <img src="assets/img/models/marioM/marioM (5).jpg" alt="model photo">
+                                    <p>Mario-M</p>
+                                </a>
+                            </div>
+                            <div class="item_3d-frame_box item_3d-frame_box--left"></div>
+                            <div class="item_3d-frame_box item_3d-frame_box--right"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" data-aos="fade-up" data-aos-duration="1000">
+                <div class="col-12" data-aos="fade-up" data-aos-duration="1000">
                     <a href="#home"><img src="assets/img/logo_Kev__Photos-w.png" alt="logo Kev__Photos"
                             title="Haut de page"></a>
                 </div>
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <a href="https://www.facebook.com/" target="_blank" title="Facebook"><i
+                    <a href="https://www.facebook.com/Kev__photos-339257216865893" target="_blank" title="Facebook"><i
                             class="fa fa-facebook-square"></i></a>
-                    <a href="https://twitter.com/?lang=fr" target="_blank" title="Twiiter"><i
-                            class="fa fa-twitter-square"></i></a>
                     <a href="https://www.instagram.com/kev__photos/?hl=fr" target="_blank" title="Instagram"><i
                             class="fa fa-instagram"></i></a>
+                    <a href="mailto:k.guillaume615@gmail.com" target="_blank" title="Mail"><i
+                            class="fa fa-paper-plane"></i></a>
                 </div>
-                <ul class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <ul class="col-12">
                     <li><a href="#home">Accueil</a></li>
-                    <li><a href="#">Hommes</a></li>
-                    <li><a href="#training">Femmes</a></li>
-                    <li><a href="#skills">Studio</a></li>
-                    <li><a href="#projects">Urban</a></li>
-                    <li><a href="#services">Kev__Photos</a></li>
+                    <li><a href="#biographie">Qui suis-je ?</a></li>
+                    <li><a href="#categories">Catégories</a></li>
+                    <li><a href="#models">Modèles</a></li>
+                    <li><a href="pages/legality.html">Mentions Légales</a></li>
                 </ul>
-                <h5 class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <span>All Rights Reserved.</span>
-                    <br> 
-                    <br> 
+                <h5 class="col-12">
+                    <span>All Rights Reserved</span>
+                    <br>
+                    <br>
                     <span>Copyright &copy; 2021 by <i>Gailliard Romain</i></span>
                 </h5>
             </div>
