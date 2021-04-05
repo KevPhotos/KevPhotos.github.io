@@ -72,9 +72,11 @@ $(document).ready(function () {
    // HOME BACKGROUND CAROUSEL
    const home_container = document.getElementById("home");
    const pictures_home = [
+      "assets/img/models/theoMjadeP/theoMjadeP-1.jpg",
       "assets/img/models/kevinGuillaume/kev__photos.jpg",
       "assets/img/models/romainGuitton/romainG-8.jpg",
       "assets/img/models/anneLise/anneLiseMin2.jpg",
+      "assets/img/models/theoMjadeP/theoMjadeP-1.jpg",
    ]
    const backgroundSlide = (images, container, step) => {
       images.forEach((image, index) => (
