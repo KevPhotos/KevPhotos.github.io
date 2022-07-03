@@ -72,8 +72,9 @@ $(document).ready(function () {
    // HOME BACKGROUND CAROUSEL
    const home_container = document.getElementById("home");
    const pictures_home = [
-      "assets/img/models/romainGuitton/romainG-8.jpg",
-      "assets/img/models/romainGa/romain-1.jpg",
+      "assets/img/models/bertilleR/bertilleR-2.jpg",
+      "assets/img/models/anneLise/anneLiseMin1.jpg",
+      "assets/img/models/anthony&Ivain/i&a-3.jpg",
       "assets/img/models/theoMjadeP/theoMjadeP-1.jpg",
    ]
    const backgroundSlide = (images, container, step) => {
@@ -90,6 +91,12 @@ $(document).ready(function () {
    const biographie_container = document.getElementById("img_bio");
    const pictures_biographie = [
       "assets/img/models/kevinGuillaume/kev__photos.jpg",
+      "assets/img/models/kevinGuillaume/kevinG_1.jpg",
+      "assets/img/models/kevinGuillaume/kevinG_2.jpg",
+      "assets/img/models/kevinGuillaume/kevinG_3.jpg",
+      "assets/img/models/kevinGuillaume/kevinG_4.jpg",
+      "assets/img/models/kevinGuillaume/kevinG_5.jpg",
+      "assets/img/models/kevinGuillaume/kev_studio.jpg",
       "assets/img/models/kevinGuillaume/kev__photos_2.jpg",
    ]
    backgroundSlide(pictures_biographie, biographie_container, 5000);
