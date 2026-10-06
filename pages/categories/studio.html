@@ -2,374 +2,241 @@
 <html lang="fr">
 
 <head>
-
-    <!-- META -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description"
-        content="Bienvenue sur mon book en ligne. Venez découvrir les réalisations de Kev__Photos !">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0d0d0f">
+    <meta name="description" content="Bienvenue sur mon book en ligne. Venez découvrir les réalisations de Kev__Photos !">
     <meta property="og:title" content="BOOK KEV__PHOTOS">
-    <meta property="og:type" content="Website">
-    <meta property="og:url" content="https://kev__photos.github.io/">
-    <meta property="og:image" content="https://kev__photos.github.io/assets/img/logo_Kev__Photos-w.png">
-    <meta property="og:description"
-        content="Bienvenue sur mon book en ligne. Venez découvrir les réalisations de Kev__Photos !">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kevphotos.github.io/">
+    <meta property="og:image" content="https://kevphotos.github.io/assets/img/logo_Kev__Photos-w.png">
+    <meta property="og:description" content="Bienvenue sur mon book en ligne. Venez découvrir les réalisations de Kev__Photos !">
     <meta property="og:locale" content="fr_FR">
-    <meta property="og:og:site_name" content="BOOK KEV__PHOTOS">
+    <meta property="og:site_name" content="BOOK KEV__PHOTOS">
     <meta name="copyright" content="Tous droits réservés à Romain Gailliard">
-
-    <!-- CANONICAL -->
-    <link rel="canonical" href="https://kev__photos.github.io" />
-
-    <!-- LOGO -->
     <link rel="icon" href="../../assets/img/favicon.ico" type="image/png">
-
-    <!-- TITLE -->
     <title>Kev__Photos | Studio</title>
 
-    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../../assets/css/nanogallery2.min.css">
-    <link rel="stylesheet" href="../../assets/css/nanogallery2.woff.min.css">
-    <link rel="stylesheet" href="../../assets/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="../../assets/css/aos.min.css">
-    <link rel="stylesheet" href="../../assets/css/style.min.css">
-    
-
-    <!-- FONTS -->
-    <link rel="stylesheet" href="../../assets/fonts/fonts.css">
-
+    <link rel="stylesheet" href="../../assets/css/style.css?v=3">
 </head>
 
-<body ondragstart="return false;" ondrop="return false;">
+<body>
+    <a class="skip" href="#main">Aller au contenu</a>
+    <div class="progress" id="progress" aria-hidden="true"></div>
 
-    <!-- SCROLL-UP BUTTON -->
-    <span id="back_top" title="Haut de page"><a href="studio.html#home_model"><i
-                class="fa fa-angle-double-up"></i></a></span>
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <a class="header__logo" href="../../index.html#home" aria-label="Kev__Photos, accueil">
+            <img src="../../assets/img/logo_Kev__Photos-w.png" alt="Kev__Photos">
+        </a>
+        <nav class="header__nav" aria-label="Navigation principale">
+            <a href="../../index.html#home">Accueil</a>
+            <a href="../../index.html#biographie">Qui suis-je ?</a>
+            <a href="../../index.html#categories">Catégories</a>
+            <a href="../../index.html#models">Modèles</a>
+            <a href="studio.html" class="is-active" aria-current="page">Studio</a>
+        </nav>
+        <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+            <span></span><span></span>
+        </button>
+    </header>
 
-    <!-- NAV -->
-    <nav class="container-fluid">
-        <ul class="row">
-            <div class="col-lg-4 col-12 flex_start nav_header">
-                <li><a href="../../index.html#home"><img src="../../assets/img/logo_Kev__Photos-w.png"
-                            alt="logo Kev__Photos" title="Haut de page"></a></li>
+    <!-- MENU MOBILE PLEIN ECRAN -->
+    <div class="menu" id="menu" aria-hidden="true">
+        <nav class="menu__nav" aria-label="Menu mobile">
+            <a href="../../index.html#home"><small>01</small>Accueil</a>
+            <a href="../../index.html#biographie"><small>02</small>Qui suis-je ?</a>
+            <a href="../../index.html#categories"><small>03</small>Catégories</a>
+            <a href="../../index.html#models"><small>04</small>Modèles</a>
+            <a href="studio.html" class="is-active"><small>05</small>Studio</a>
+        </nav>
+        <div class="menu__foot">
+            <a href="https://www.instagram.com/kev__photos/?hl=fr" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.facebook.com/Kev__photos-339257216865893" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa fa-facebook-square"></i></a>
+            <a href="mailto:k.guillaume615@gmail.com" aria-label="Mail"><i class="fa fa-paper-plane"></i></a>
+        </div>
+    </div>
+
+    <main id="main">
+
+        <!-- BANDEAU -->
+        <section class="phero" id="home_model">
+            <div class="phero__bg" style="background-image:url('../../assets/img/models/kevinGuillaume/kev_studio.jpg'); --pos:50% 35%" aria-hidden="true"></div>
+            <div class="phero__shade"></div>
+            <div class="phero__content wrap">
+                <p class="crumb hero__in" style="--d:.1s"><a href="../../index.html#categories">Catégories</a><i>/</i>Studio</p>
+                <h1 class="phero__title hero__in" style="--d:.25s">Studio</h1>
+                <p class="phero__meta hero__in" style="--d:.45s">Catégorie &middot; 19 photos</p>
             </div>
-            <div class="col-lg-8 col-12 flex_end nav_link">
+        </section>
+
+        <!-- GALERIE -->
+        <section class="gallery-wrap">
+            <div class="gallery wrap" id="gallery">
+                <figure class="shot" data-reveal style="--ar:0.5405">
+                    <button class="shot__open" type="button" aria-label="Agrandir : Photo de Kevin-G" data-name="Kevin-G" data-href="../models/kevinG/kevinG.html">
+                        <img src="../../assets/img/models/kevinGuillaume/kev_studio.jpg" alt="Photo de Kevin-G" width="1107" height="2048" loading="eager" decoding="async" fetchpriority="high" draggable="false">
+                    </button>
+                    <figcaption><a href="../models/kevinG/kevinG.html"><span>Kevin-G</span><small>Voir le modèle &#8599;</small></a></figcaption>
+                </figure>
+                <figure class="shot" data-reveal style="--ar:0.6664">
+                    <button class="shot__open" type="button" aria-label="Agrandir : Photo de Francisco-C" data-name="Francisco-C" data-href="../models/franciscoC/franciscoC.html">
+                        <img src="../../assets/img/models/franciscoC/franciscoC (5).jpg" alt="Photo de Francisco-C" width="2048" height="3073" loading="eager" decoding="async" fetchpriority="high" draggable="false">
+                    </button>
+                    <figcaption><a href="../models/franciscoC/franciscoC.html"><span>Francisco-C</span><small>Voir le modèle &#8599;</small></a></figcaption>
+                </figure>
+                <figure class="shot" data-reveal style="--ar:0.6667">
+                    <button class="shot__open" type="button" aria-label="Agrandir : Photo de Edwin-N" data-name="Edwin-N" data-href="../models/edwinN/edwinN.html">
+                        <img src="../../assets/img/models/edwinN/edwinN (3).jpg" alt="Photo de Edwin-N" width="1500" height="2250" loading="eager" decoding="async" draggable="false">
+                    </button>
+                    <figcaption><a href="../models/edwinN/edwinN.html"><span>Edwin-N</span><small>Voir le modèle &#8599;</small></a></figcaption>
+                </figure>
+                <figure class="shot" data-reveal style="--ar:0.6667">
+                    <button class="shot__open" type="button" aria-label="Agrandir : Photo de Maxime-D" data-name="Maxime-D" data-href="../models/maximeD/maximeD.html">
+                        <img src="../../assets/img/models/maximeD/maximeD (7).jpg" alt="Photo de Maxime-D" width="1500" height="2250" loading="eager" decoding="async" draggable="false">
+                    </button>
+                    <figcaption><a href="../models/maximeD/maximeD.html"><span>Maxime-D</span><small>Voir le modèle &#8599;</small></a></figcaption>
+                </figure>
+                <figure class="shot" data-reveal style="--ar:0.5227">
+                    <button class="shot__open" type="button" aria-label="Agrandir : Photo de Evan-B" data-name="Evan-B" data-href="../models/evanB/evanB.html">
+                        <img src="../../assets/img/models/evanB/evanB (7).jpg" alt="Photo de Evan-B" width="2017" height="3859" loading="lazy" decoding="async" draggable="false">
+                    </button>
+                    <figcaption><a href="../models/evanB/evanB.html"><span>Evan-B</span><small>Voir le modèle &#8599;</small></a></figcaption>
+                </figure>
+                <figure class="shot" data-reveal style="--ar:0.6665">
+                    <button class="shot__open" type="button" aria-label="Agrandir : Photo de Romain-G" data-name="Romain-G" data-href="../models/romainGa/romainGa.html">
+                        <img src="../../assets/img/models/romainGa/romain (7).jpg" alt="Photo de Romain-G" width="2730" height="4096" loading="lazy" decoding="async" draggable="false">
+                    </button>
+                    <figcaption><a href="../models/romainGa/romainGa.html"><span>Romain-G</span><small>Voir le modèle &#8599;</small></a></figcaption>
+                </figure>
+                <figure class="shot" data-reveal style="--ar:0.6471">
+                    <button class="shot__open" type="button" aria-label="Agrandir : Photo de Mario-M" data-name="Mario-M" data-href="../models/marioM/marioM.html">
+                        <img src="../../assets/img/models/marioM/marioM (2).jpg" alt="Photo de Mario-M" width="2048" height="3165" loading="lazy" decoding="async" draggable="false">
+                    </button>
+                    <figcaption><a href="../models/marioM/marioM.html"><span>Mario-M</span><small>Voir le modèle &#8599;</small></a></figcaption>
+                </figure>
+                <figure class="shot" data-reveal style="--ar:0.6240">
+                    <button class="shot__open" type="button" aria-label="Agrandir : Photo de Romain-G" data-name="Romain-G" data-href="../models/romainG/romainG.html">
+                        <img src="../../assets/img/models/romainGuitton/romainG-6.jpg" alt="Photo de Romain-G" width="1278" height="2048" loading="lazy" decoding="async" draggable="false">
+                    </button>
+                    <figcaption><a href="../models/romainG/romainG.html"><span>Romain-G</span><small>Voir le modèle &#8599;</small></a></figcaption>
+                </figure>
+                <figure class="shot" data-reveal style="--ar:1.5004">
+                    <button class="shot__open" type="button" aria-label="Agrandir : Photo de Alexis-S" data-name="Alexis-S" data-href="../models/alexisS/alexisS.html">
+                        <img src="../../assets/img/models/alexisS/alexiS (3).jpg" alt="Photo de Alexis-S" width="2048" height="1365" loading="lazy" decoding="async" draggable="false">
+                    </button>
+                    <figcaption><a href="../models/alexisS/alexisS.html"><span>Alexis-S</span><small>Voir le modèle &#8599;</small></a></figcaption>
+                </figure>
+                <figure class="shot" data-reveal style="--ar:0.6509">
+                    <button class="shot__open" type="button" aria-label="Agrandir : Photo de Alexandre-B" data-name="Alexandre-B" data-href="../models/alexandreB/alexandreB.html">
+                        <img src="../../assets/img/models/alexandreB/alexandreB (6).jpg" alt="Photo de Alexandre-B" width="1333" height="2048" loading="lazy" decoding="async" draggable="false">
+                    </button>
+                    <figcaption><a href="../models/alexandreB/alexandreB.html"><span>Alexandre-B</span><small>Voir le modèle &#8599;</small></a></figcaption>
+                </figure>
+                <figure class="shot" data-reveal style="--ar:0.6392">
+                    <button class="shot__open" type="button" aria-label="Agrandir : Photo de Andrea-A" data-name="Andrea-A" data-href="../models/andreaA/andreaA.html">
+                        <img src="../../assets/img/models/andreaA/andreaA (6).jpg" alt="Photo de Andrea-A" width="1309" height="2048" loading="lazy" decoding="async" draggable="false">
+                    </button>
+                    <figcaption><a href="../models/andreaA/andreaA.html"><span>Andrea-A</span><small>Voir le modèle &#8599;</small></a></figcaption>
+                </figure>
+                <figure class="shot" data-reveal style="--ar:0.6665">
+                    <button class="shot__open" type="button" aria-label="Agrandir : Photo de Melissa-D" data-name="Melissa-D" data-href="../models/melissaD/melissaD.html">
+                        <img src="../../assets/img/models/melissaD/melissaD (1).jpg" alt="Photo de Melissa-D" width="1365" height="2048" loading="lazy" decoding="async" draggable="false">
+                    </button>
+                    <figcaption><a href="../models/melissaD/melissaD.html"><span>Melissa-D</span><small>Voir le modèle &#8599;</small></a></figcaption>
+                </figure>
+                <figure class="shot" data-reveal style="--ar:0.6216">
+                    <button class="shot__open" type="button" aria-label="Agrandir : Photo de Nathan-D" data-name="Nathan-D" data-href="../models/nathanD/nathanD.html">
+                        <img src="../../assets/img/models/nathanD/nathanD (4).jpg" alt="Photo de Nathan-D" width="1273" height="2048" loading="lazy" decoding="async" draggable="false">
+                    </button>
+                    <figcaption><a href="../models/nathanD/nathanD.html"><span>Nathan-D</span><small>Voir le modèle &#8599;</small></a></figcaption>
+                </figure>
+                <figure class="shot" data-reveal style="--ar:0.6665">
+                    <button class="shot__open" type="button" aria-label="Agrandir : Photo de Gaelle-F" data-name="Gaelle-F" data-href="../models/gaelleF/gaelleF.html">
+                        <img src="../../assets/img/models/gaelleF/gaelleF (1).jpg" alt="Photo de Gaelle-F" width="2730" height="4096" loading="lazy" decoding="async" draggable="false">
+                    </button>
+                    <figcaption><a href="../models/gaelleF/gaelleF.html"><span>Gaelle-F</span><small>Voir le modèle &#8599;</small></a></figcaption>
+                </figure>
+                <figure class="shot" data-reveal style="--ar:0.6323">
+                    <button class="shot__open" type="button" aria-label="Agrandir : Photo de Dylan-A" data-name="Dylan-A" data-href="../models/dylanA/dylanA.html">
+                        <img src="../../assets/img/models/dylanA/dylanA (5).jpg" alt="Photo de Dylan-A" width="2590" height="4096" loading="lazy" decoding="async" draggable="false">
+                    </button>
+                    <figcaption><a href="../models/dylanA/dylanA.html"><span>Dylan-A</span><small>Voir le modèle &#8599;</small></a></figcaption>
+                </figure>
+                <figure class="shot" data-reveal style="--ar:0.6665">
+                    <button class="shot__open" type="button" aria-label="Agrandir : Photo de Dylan-E" data-name="Dylan-E" data-href="../models/dylanE/dylanE.html">
+                        <img src="../../assets/img/models/dylanE/dylanE (1).jpg" alt="Photo de Dylan-E" width="2730" height="4096" loading="lazy" decoding="async" draggable="false">
+                    </button>
+                    <figcaption><a href="../models/dylanE/dylanE.html"><span>Dylan-E</span><small>Voir le modèle &#8599;</small></a></figcaption>
+                </figure>
+                <figure class="shot" data-reveal style="--ar:1.5004">
+                    <button class="shot__open" type="button" aria-label="Agrandir : Photo de Gwendal-B" data-name="Gwendal-B" data-href="../models/gwendalB/gwendalB.html">
+                        <img src="../../assets/img/models/gwendalB/gwendalB (4).jpg" alt="Photo de Gwendal-B" width="4096" height="2730" loading="lazy" decoding="async" draggable="false">
+                    </button>
+                    <figcaption><a href="../models/gwendalB/gwendalB.html"><span>Gwendal-B</span><small>Voir le modèle &#8599;</small></a></figcaption>
+                </figure>
+                <figure class="shot" data-reveal style="--ar:0.6665">
+                    <button class="shot__open" type="button" aria-label="Agrandir : Photo de Jordan-R" data-name="Jordan-R" data-href="../models/jordanR/jordanR.html">
+                        <img src="../../assets/img/models/jordanR/jordanR (4).jpg" alt="Photo de Jordan-R" width="2730" height="4096" loading="lazy" decoding="async" draggable="false">
+                    </button>
+                    <figcaption><a href="../models/jordanR/jordanR.html"><span>Jordan-R</span><small>Voir le modèle &#8599;</small></a></figcaption>
+                </figure>
+                <figure class="shot" data-reveal style="--ar:0.6392">
+                    <button class="shot__open" type="button" aria-label="Agrandir : Photo de Mallaury-P" data-name="Mallaury-P" data-href="../models/mallauryP/mallauryP.html">
+                        <img src="../../assets/img/models/mallauryP/mallauryP (3).jpg" alt="Photo de Mallaury-P" width="2618" height="4096" loading="lazy" decoding="async" draggable="false">
+                    </button>
+                    <figcaption><a href="../models/mallauryP/mallauryP.html"><span>Mallaury-P</span><small>Voir le modèle &#8599;</small></a></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <nav class="pagenav wrap" aria-label="Autres catégories">
+            <a class="pagenav__prev" href="urban.html"><small>&#8592; Précédente</small><span>Urban</span></a>
+            <a class="pagenav__next" href="body.html"><small>Suivante &#8594;</small><span>Corps</span></a>
+        </nav>
+    </main>
+
+    <!-- VISIONNEUSE -->
+    <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Visionneuse de photos" aria-hidden="true">
+        <button class="lb__close" id="lbClose" type="button" aria-label="Fermer">&times;</button>
+        <button class="lb__nav lb__nav--prev" id="lbPrev" type="button" aria-label="Photo précédente"><i class="fa fa-angle-left"></i></button>
+        <figure class="lb__fig">
+            <img id="lbImg" alt="" draggable="false">
+            <figcaption>
+                <span id="lbCount"></span>
+                <a id="lbLink" href="#"></a>
+            </figcaption>
+        </figure>
+        <button class="lb__nav lb__nav--next" id="lbNext" type="button" aria-label="Photo suivante"><i class="fa fa-angle-right"></i></button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="wrap footer__grid">
+            <a class="footer__logo" href="../../index.html#home" aria-label="Accueil"><img src="../../assets/img/logo_Kev__Photos-w.png" alt="Kev__Photos"></a>
+            <ul class="footer__links">
                 <li><a href="../../index.html#home">Accueil</a></li>
                 <li><a href="../../index.html#biographie">Qui suis-je ?</a></li>
                 <li><a href="../../index.html#categories">Catégories</a></li>
                 <li><a href="../../index.html#models">Modèles</a></li>
-                <li><a href="studio.html" class="active">Studio</a></li>
-            </div>
-        </ul>
-    </nav>
-
-    <!-- MODEL BACKGROUND -->
-    <div class="model_home" id="home_model"
-        style="background-image: url(../../assets/img/models/baptisteP/baptisteP\ \(8\).jpg); background-position: 50% 40%;" data-aos="fade-down"
-        data-aos-duration="1500">
-        <div class="main-animate">
-            <div>
-                <h1>Studio</h1>
+                <li><a href="../../pages/legality.html">Mentions légales</a></li>
+            </ul>
+            <div class="footer__social">
+                <a href="https://www.facebook.com/Kev__photos-339257216865893" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook"><i class="fa fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/kev__photos/?hl=fr" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+                <a href="mailto:k.guillaume615@gmail.com" title="Mail" aria-label="Mail"><i class="fa fa-paper-plane"></i></a>
             </div>
         </div>
-    </div>
-
-    <!-- MODEL PICTURES -->
-    <div class="categories_pictures container-fluid">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-12 first_column">
-                <div class="categories_box">
-                    <img src="../../assets/img/models/wilsonM/wilsonM (1).jpg" class="category_img" data-ngsrc="../../assets/img/models/wilsonM/wilsonM (1).jpg" data-nanogallery2-lightbox 
-                    alt="model picture" data-aos="fade-up" data-aos-duration="1500" >
-                    <div class="categories_box_content">
-                        <a href="../models/wilsonM/wilsonM.html">
-                            <h3>Wilson-M</h3>
-                            <span>Model Photo</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="categories_box">
-                    <img src="../../assets/img/models/franciscoC/franciscoC (5).jpg" class="category_img" data-ngsrc="../../assets/img/models/franciscoC/franciscoC (5).jpg" data-nanogallery2-lightbox 
-                    alt="model picture" data-aos="fade-up" data-aos-duration="1500" >
-                    <div class="categories_box_content">
-                        <a href="../models/franciscoC/franciscoC.html">
-                            <h3>Francisco-C</h3>
-                            <span>Model Photo</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 second_column">
-                <div class="categories_box">
-                    <img src="../../assets/img/models/edwinN/edwinN (3).jpg" class="category_img" data-ngsrc="../../assets/img/models/edwinN/edwinN (3).jpg" data-nanogallery2-lightbox 
-                    alt="model picture" data-aos="fade-up" data-aos-duration="1500" >
-                    <div class="categories_box_content">
-                        <a href="../models/edwinN/edwinN.html">
-                            <h3>Edwin-N</h3>
-                            <span>Model Photo</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="categories_box">
-                    <img src="../../assets/img/models/maximeD/maximeD (7).jpg" class="category_img" data-ngsrc="../../assets/img/models/maximeD/maximeD (7).jpg" data-nanogallery2-lightbox 
-                    alt="model picture" data-aos="fade-up" data-aos-duration="1500" >
-                    <div class="categories_box_content">
-                        <a href="../models/maximeD/maximeD.html">
-                            <h3>Maxime-D</h3>
-                            <span>Model Photo</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 third_column">
-                <div class="categories_box">
-                    <img src="../../assets/img/models/evanB/evanB (7).jpg" class="category_img" data-ngsrc="../../assets/img/models/evanB/evanB (7).jpg" data-nanogallery2-lightbox 
-                    alt="model picture" data-aos="fade-up" data-aos-duration="1500" >
-                    <div class="categories_box_content">
-                        <a href="../models/evanB/evanB.html">
-                            <h3>Evan-B</h3>
-                            <span>Model Photo</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="categories_box">
-                    <img src="../../assets/img/models/romainGa/romain (7).jpg" class="category_img" data-ngsrc="../../assets/img/models/romainGa/romain (7).jpg" data-nanogallery2-lightbox 
-                    alt="model picture" data-aos="fade-up" data-aos-duration="1500" >
-                    <div class="categories_box_content">
-                        <a href="../models/romainGa/romainGa.html">
-                            <h3>Romain-G</h3>
-                            <span>Model Photo</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 four_column">
-                <div class="categories_box">
-                    <img src="../../assets/img/models/marioM/marioM (2).jpg" class="category_img" data-ngsrc="../../assets/img/models/marioM/marioM (2).jpg" data-nanogallery2-lightbox 
-                    alt="model picture" data-aos="fade-up" data-aos-duration="1500" >
-                    <div class="categories_box_content">
-                        <a href="../models/marioM/marioM.html">
-                            <h3>Mario-M</h3>
-                            <span>Model Photo</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="categories_box">
-                    <img src="../../assets/img/models/baptisteP/baptisteP (6).jpg" class="category_img" data-ngsrc="../../assets/img/models/baptisteP/baptisteP (6).jpg" data-nanogallery2-lightbox 
-                    alt="model picture" data-aos="fade-up" data-aos-duration="1500" >
-                    <div class="categories_box_content">
-                        <a href="../models/baptisteP/baptisteP.html">
-                            <h3>Baptiste-P</h3>
-                            <span>Model Photo</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-lg-3 col-md-6 col-12 first_column">
-                <div class="categories_box">
-                    <img src="../../assets/img/models/alexisS/alexiS (2).jpg" class="category_img" data-ngsrc="../../assets/img/models/alexisS/alexiS (2).jpg" data-nanogallery2-lightbox 
-                    alt="model picture" data-aos="fade-up" data-aos-duration="1500" >
-                    <div class="categories_box_content">
-                        <a href="../models/alexisS/alexisS.html">
-                            <h3>Alexis-S</h3>
-                            <span>Model Amateur</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="categories_box">
-                    <img src="../../assets/img/models/alexandreB/alexandreB (6).jpg" class="category_img" data-ngsrc="../../assets/img/models/alexandreB/alexandreB (6).jpg" data-nanogallery2-lightbox 
-                    alt="model picture" data-aos="fade-up" data-aos-duration="1500" >
-                    <div class="categories_box_content">
-                        <a href="../models/alexandreB/alexandreB.html">
-                            <h3>Alexandre-B</h3>
-                            <span>Model Amateur</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 second_column">
-                <div class="categories_box">
-                    <img src="../../assets/img/models/andreaA/andreaA (6).jpg" class="category_img" data-ngsrc="../../assets/img/models/andreaA/andreaA (6).jpg" data-nanogallery2-lightbox 
-                    alt="model picture" data-aos="fade-up" data-aos-duration="1500" >
-                    <div class="categories_box_content">
-                        <a href="../models/andreaA/andreaA.html">
-                            <h3>Andrea-A</h3>
-                            <span>Model Photo</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="categories_box">
-                    <img src="../../assets/img/models/melissaD/melissaD (1).jpg" class="category_img" data-ngsrc="../../assets/img/models/melissaD/melissaD (1).jpg" data-nanogallery2-lightbox 
-                    alt="model picture" data-aos="fade-up" data-aos-duration="1500" >
-                    <div class="categories_box_content">
-                        <a href="../models/melissaD/melissaD.html">
-                            <h3>Melissa-D</h3>
-                            <span>Model Photo</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 third_column">
-                <div class="categories_box">
-                    <img src="../../assets/img/models/nathanD/nathanD (4).jpg" class="category_img" data-ngsrc="../../assets/img/models/nathanD/nathanD (4).jpg" data-nanogallery2-lightbox 
-                    alt="model picture" data-aos="fade-up" data-aos-duration="1500" >
-                    <div class="categories_box_content">
-                        <a href="../models/nathanD/nathanD.html">
-                            <h3>Nathan-D</h3>
-                            <span>Model Photo</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="categories_box">
-                    <img src="../../assets/img/models/gaelleF/gaelleF (1).jpg" class="category_img" data-ngsrc="../../assets/img/models/gaelleF/gaelleF (1).jpg" data-nanogallery2-lightbox 
-                    alt="model picture" data-aos="fade-up" data-aos-duration="1500" >
-                    <div class="categories_box_content">
-                        <a href="../models/gaelleF/gaelleF.html">
-                            <h3>Gaelle-F</h3>
-                            <span>Model Photo</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 four_column">
-                <div class="categories_box">
-                    <img src="../../assets/img/models/dylanA/dylanA (5).jpg" class="category_img" data-ngsrc="../../assets/img/models/dylanA/dylanA (5).jpg" data-nanogallery2-lightbox 
-                    alt="model picture" data-aos="fade-up" data-aos-duration="1500" >
-                    <div class="categories_box_content">
-                        <a href="../models/dylanA/dylanA.html">
-                            <h3>Dylan-A</h3>
-                            <span>Model Photo</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="categories_box">
-                    <img src="../../assets/img/models/dylanE/dylanE (1).jpg" class="category_img" data-ngsrc="../../assets/img/models/dylanE/dylanE (1).jpg" data-nanogallery2-lightbox 
-                    alt="model picture" data-aos="fade-up" data-aos-duration="1500" >
-                    <div class="categories_box_content">
-                        <a href="../models/dylanE/dylanE.html">
-                            <h3>Dylan-E</h3>
-                            <span>Model Photo</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-lg-3 col-md-6 col-12 first_column">
-                <div class="categories_box">
-                    <img src="../../assets/img/models/gwendalB/gwendalB (4).jpg" class="category_img" data-ngsrc="../../assets/img/models/gwendalB/gwendalB (4).jpg" data-nanogallery2-lightbox 
-                    alt="model picture" data-aos="fade-up" data-aos-duration="1500" >
-                    <div class="categories_box_content">
-                        <a href="../models/gwendalB/gwendalB.html">
-                            <h3>Gwendal-B</h3>
-                            <span>Model Amateur</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="categories_box">
-                    <img src="../../assets/img/models/cleaC/cleaC (3).jpg" class="category_img" data-ngsrc="../../assets/img/models/cleaC/cleaC (3).jpg" data-nanogallery2-lightbox 
-                    alt="model picture" data-aos="fade-up" data-aos-duration="1500" >
-                    <div class="categories_box_content">
-                        <a href="../models/cleaC/cleaC.html">
-                            <h3>Clea-C</h3>
-                            <span>Model Amateur</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 two_column">
-                <div class="categories_box">
-                    <img src="../../assets/img/models/jordanR/jordanR (4).jpg" class="category_img" data-ngsrc="../../assets/img/models/jordanR/jordanR (4).jpg" data-nanogallery2-lightbox 
-                    alt="model picture" data-aos="fade-up" data-aos-duration="1500" >
-                    <div class="categories_box_content">
-                        <a href="../models/jordanR/jordanR.html">
-                            <h3>Jordan-R</h3>
-                            <span>Model Amateur</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="categories_box">
-                    <img src="../../assets/img/models/vincentM/vincentM (4).jpg" class="category_img" data-ngsrc="../../assets/img/models/vincentM/vincentM (4).jpg" data-nanogallery2-lightbox 
-                    alt="model picture" data-aos="fade-up" data-aos-duration="1500" >
-                    <div class="categories_box_content">
-                        <a href="../models/vincentM/vincentM.html">
-                            <h3>Vincent-M</h3>
-                            <span>Model Amateur</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 third_column">
-                <div class="categories_box">
-                    <img src="../../assets/img/models/mallauryP/mallauryP (3).jpg" class="category_img" data-ngsrc="../../assets/img/models/mallauryP/mallauryP (3).jpg" data-nanogallery2-lightbox 
-                    alt="model picture" data-aos="fade-up" data-aos-duration="1500" >
-                    <div class="categories_box_content">
-                        <a href="../models/mallauryP/mallauryP.html">
-                            <h3>Mallaury-P</h3>
-                            <span>Model Amateur</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 four_column">
-                <div class="categories_box">
-                    <img src="../../assets/img/models/bertilleR/bertilleR (7).jpg" class="category_img" data-ngsrc="../../assets/img/models/bertilleR/bertilleR (7).jpg" data-nanogallery2-lightbox 
-                    alt="model picture" data-aos="fade-up" data-aos-duration="1500" >
-                    <div class="categories_box_content">
-                        <a href="../models/bertilleR/bertilleR.html">
-                            <h3>Bertille-R</h3>
-                            <span>Model Photo</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-12" data-aos="fade-up" data-aos-duration="1000">
-                    <a href="../../index.html#home"><img src="../../assets/img/logo_Kev__Photos-w.png"
-                            alt="logo Kev__Photos" title="Accueil"></a>
-                </div>
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <a href="https://www.facebook.com/Kev__photos-339257216865893" target="_blank" title="Facebook"><i
-                            class="fa fa-facebook-square"></i></a>
-                    <a href="https://www.instagram.com/kev__photos/?hl=fr" target="_blank" title="Instagram"><i
-                            class="fa fa-instagram"></i></a>
-                    <a href="mailto:k.guillaume615@gmail.com" target="_blank" title="Mail"><i
-                            class="fa fa-paper-plane"></i></a>
-                </div>
-                <ul class="col-12">
-                    <li><a href="../../index.html#home">Accueil</a></li>
-                    <li><a href="../../index.html#biographie">Qui suis-je ?</a></li>
-                    <li><a href="../../index.html#categories">Catégories</a></li>
-                    <li><a href="../../index.html#models">Modèles</a></li>
-                    <li><a href="../../pages/legality.html">Mentions Légales</a></li>
-                </ul>
-                <h5 class="col-12">
-                    <span>All Rights Reserved</span>
-                    <br>
-                    <br>
-                    <span>Copyright &copy; 2021 by <i>Gailliard Romain</i></span>
-                </h5>
-            </div>
-        </div>
+        <p class="footer__copy">All Rights Reserved &middot; Copyright &copy; 2021-2026 by <i>Gailliard Romain</i></p>
     </footer>
 
-    <!-- SCRIPTS -->
-    <script src="../../assets/js/jquery.min.js"></script>
-    <script src="../../assets/js/jquery.nanogallery2.core.min.js"></script>
-    <script src="../../assets/js/swiped-events.min.js"></script>
-    <script src="../../assets/js/aos.min.js"></script>
-    <script src="../../assets/js/app.min.js"></script>
-    
+    <button class="totop" id="totop" type="button" aria-label="Haut de page"><i class="fa fa-angle-up"></i></button>
+
+    <script src="../../assets/js/app.js?v=3"></script>
 </body>
 
 </html>

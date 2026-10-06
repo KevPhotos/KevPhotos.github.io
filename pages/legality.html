@@ -5,7 +5,8 @@
 
     <!-- META -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0d0d0f">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description"
         content="Bienvenue sur mon book en ligne. Venez découvrir les réalisations de Kev__Photos !">
@@ -28,46 +29,63 @@
     <!-- TITLE -->
     <title>Kev__Photos | Mentions Légales</title>
 
-    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../assets/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="../assets/css/aos.min.css">
-    <link rel="stylesheet" href="../assets/css/style.min.css">
-
-    <!-- FONTS -->
-    <link rel="stylesheet" href="../assets/fonts/fonts.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 
 </head>
 
-<body ondragstart="return false;" ondrop="return false;">
+<body>
+    <a class="skip" href="#main">Aller au contenu</a>
+    <div class="progress" id="progress" aria-hidden="true"></div>
 
-    <!-- SCROLL-UP BUTTON -->
-    <span id="back_top" title="Haut de page"><a href="legality.html#home_legality"><i
-                class="fa fa-angle-double-up"></i></a></span>
+    <header class="header" id="header">
+        <a class="header__logo" href="../index.html#home" aria-label="Kev__Photos, accueil">
+            <img src="../assets/img/logo_Kev__Photos-w.png" alt="Kev__Photos">
+        </a>
+        <nav class="header__nav" aria-label="Navigation principale">
+            <a href="../index.html#home">Accueil</a>
+            <a href="../index.html#biographie">Qui suis-je ?</a>
+            <a href="../index.html#categories">Catégories</a>
+            <a href="../index.html#models">Modèles</a>
+            <a href="legality.html" class="is-active" aria-current="page">Mentions légales</a>
+        </nav>
+        <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+            <span></span><span></span>
+        </button>
+    </header>
 
-    <!-- NAV -->
-    <nav class="container-fluid">
-        <ul class="row">
-            <div class="col-lg-4 col-12 flex_start nav_header">
-                <li><a href="../index.html#home"><img src="../assets/img/logo_Kev__Photos-w.png" alt="logo Kev__Photos"
-                            title="Haut de page"></a></li>
+    <div class="menu" id="menu" aria-hidden="true">
+        <nav class="menu__nav" aria-label="Menu mobile">
+            <a href="../index.html#home"><small>01</small>Accueil</a>
+            <a href="../index.html#biographie"><small>02</small>Qui suis-je ?</a>
+            <a href="../index.html#categories"><small>03</small>Catégories</a>
+            <a href="../index.html#models"><small>04</small>Modèles</a>
+            <a href="legality.html" class="is-active"><small>05</small>Mentions légales</a>
+        </nav>
+        <div class="menu__foot">
+            <a href="https://www.instagram.com/kev__photos/?hl=fr" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.facebook.com/Kev__photos-339257216865893" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa fa-facebook-square"></i></a>
+            <a href="mailto:k.guillaume615@gmail.com" aria-label="Mail"><i class="fa fa-paper-plane"></i></a>
+        </div>
+    </div>
+
+    <main id="main">
+        <section class="phero" id="home_legality">
+            <div class="phero__bg" style="background-image:url('../assets/img/models/kevinGuillaume/kev_studio.jpg'); --pos:25% 30%" aria-hidden="true"></div>
+            <div class="phero__shade"></div>
+            <div class="phero__content wrap">
+                <p class="crumb hero__in" style="--d:.1s"><a href="../index.html#home">Accueil</a><i>/</i>Informations</p>
+                <h1 class="phero__title hero__in" style="--d:.25s">Mentions légales</h1>
+                <p class="phero__meta hero__in" style="--d:.45s">Kev__Photos · Informations éditoriales</p>
             </div>
-            <div class="col-lg-8 col-12 flex_end nav_link">
-                <li><a href="../index.html#home">Accueil</a></li>
-                <li><a href="../index.html#biographie">Qui suis-je ?</a></li>
-                <li><a href="../index.html#categories">Catégories</a></li>
-                <li><a href="../index.html#models">Modèles</a></li>
-                <li><a href="legality.html" class="active">Mentions Légales</a></li>
-            </div>
-        </ul>
-    </nav>
+        </section>
 
-    <!-- LEGALITY -->
-    <div class="container legality" id="home_legality">
-        <div class="row">
-            <h4 class="col-12" data-aos="zoom-out" data-aos-duration="1500"><span>Mentions Légales</span></h4>
-            <div class="col-lg-6 col-12" data-aos="flip-up" data-aos-duration="1500">
-                <h5><span>Droit à l’image</span></h5>
+        <section class="legal-content wrap" aria-label="Informations légales">
+            <article class="legal-section" data-reveal>
+                <h2>Droit à l’image</h2>
                 <ul>
                     <li>
                         <u>Données Légales :</u>
@@ -118,13 +136,14 @@
                         autorisation
                         écrite particulière et préalable est strictement interdite.</li>
                 </ul>
-            </div>
-            <div class="col-lg-6 col-12" data-aos="flip-up" data-aos-duration="1500">
-                <h5><span>Mentions légales</span></h5>
+            </article>
+            <article class="legal-section" data-reveal>
+                <h2>Mentions légales</h2>
                 <ul>
                     <li>
                         <a href="https://kevphotos.github.io">https://kevphotos.github.io</a> est un site édité par
                         Romain Gailliard.
+                    </li>
                     <li>
                         Responsable de maintien : Romain Gailliard
                     </li>
@@ -169,9 +188,9 @@
                         l’utilisation des informations et/ou documents disponibles sur ce site.
                     </li>
                 </ul>
-            </div>
-            <div class="col-12" data-aos="flip-down" data-aos-duration="1500">
-                <h5><span>Propriété intellectuelle</span></h5>
+            </article>
+            <article class="legal-section" data-reveal>
+                <h2>Propriété intellectuelle</h2>
                 <ul>
                     <li>
                         Tous les éléments graphiques ou intellectuels originaux (structure générale et contenu des
@@ -198,48 +217,31 @@
                         seuls compétents pour connaître de ce litige.
                     </li>
                 </ul>
-            </div>
-        </div>
-    </div>
+            </article>
+        </section>
+    </main>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-12" data-aos="fade-up" data-aos-duration="1000">
-                    <a href="../index.html#home"><img src="../assets/img/logo_Kev__Photos-w.png" alt="logo Kev__Photos"
-                            title="Accueil"></a>
-                </div>
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <a href="https://www.facebook.com/Kev__photos-339257216865893" target="_blank" title="Facebook"><i
-                            class="fa fa-facebook-square"></i></a>
-                    <a href="https://www.instagram.com/kev__photos/?hl=fr" target="_blank" title="Instagram"><i
-                            class="fa fa-instagram"></i></a>
-                    <a href="mailto:k.guillaume615@gmail.com" target="_blank" title="Mail"><i
-                            class="fa fa-paper-plane"></i></a>
-                </div>
-                <ul class="col-12">
-                    <li><a href="../index.html#home">Accueil</a></li>
-                    <li><a href="../index.html#biographie">Qui suis-je ?</a></li>
-                    <li><a href="../index.html#categories">Catégories</a></li>
-                    <li><a href="../index.html#models">Modèles</a></li>
-                    <li><a href="legality.html">Mentions Légales</a></li>
-                </ul>
-                <h5 class="col-12">
-                    <span>All Rights Reserved</span>
-                    <br>
-                    <br>
-                    <span>Copyright &copy; 2021 by <i>Gailliard Romain</i></span>
-                </h5>
+    <footer class="footer">
+        <div class="wrap footer__grid">
+            <a class="footer__logo" href="../index.html#home" aria-label="Accueil"><img src="../assets/img/logo_Kev__Photos-w.png" alt="Kev__Photos"></a>
+            <ul class="footer__links">
+                <li><a href="../index.html#home">Accueil</a></li>
+                <li><a href="../index.html#biographie">Qui suis-je ?</a></li>
+                <li><a href="../index.html#categories">Catégories</a></li>
+                <li><a href="../index.html#models">Modèles</a></li>
+                <li><a href="legality.html" aria-current="page">Mentions légales</a></li>
+            </ul>
+            <div class="footer__social">
+                <a href="https://www.facebook.com/Kev__photos-339257216865893" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/kev__photos/?hl=fr" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+                <a href="mailto:k.guillaume615@gmail.com" aria-label="Mail"><i class="fa fa-paper-plane"></i></a>
             </div>
         </div>
+        <p class="footer__copy">All Rights Reserved &middot; Copyright &copy; 2021-2026 by <i>Gailliard Romain</i></p>
     </footer>
 
-    <!-- SCRIPTS -->
-    <script src="../assets/js/swiped-events.min.js"></script>
-    <script src="../assets/js/aos.min.js"></script>
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/js/app.min.js"></script>
+    <button class="totop" id="totop" type="button" aria-label="Haut de page"><i class="fa fa-angle-up"></i></button>
+    <script src="../assets/js/app.js"></script>
 </body>
 
 </html>
