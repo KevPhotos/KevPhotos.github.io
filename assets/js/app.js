@@ -6,9 +6,21 @@
 
   /* ---------- Hero : diaporama en fondu ---------- */
   var slides = [].slice.call(document.querySelectorAll('.hero__slide'));
-  var dots = [].slice.call(document.querySelectorAll('#heroDots i'));
+  var dotsContainer = document.getElementById('heroDots');
+  var dots = [];
   var current = 0;
   var STEP = 5000;
+
+  if (dotsContainer) {
+    dotsContainer.style.setProperty('--hero-step', STEP + 'ms');
+    dotsContainer.textContent = '';
+    slides.forEach(function (_, index) {
+      var dot = document.createElement('i');
+      if (index === 0) dot.classList.add('is-active');
+      dotsContainer.appendChild(dot);
+      dots.push(dot);
+    });
+  }
 
   function preload(src) { var i = new Image(); i.src = src; }
   slides.forEach(function (s) { if (s.dataset.src) preload(s.dataset.src); });
@@ -20,11 +32,12 @@
       next.removeAttribute('data-src');
     }
     slides[current].classList.remove('is-active');
-    dots[current].classList.remove('is-active');
+    if (dots[current]) dots[current].classList.remove('is-active');
     next.classList.add('is-active');
-    // relance l'animation de la barre de progression
-    void dots[n].offsetWidth;
-    dots[n].classList.add('is-active');
+    if (dots[n]) {
+      void dots[n].offsetWidth;
+      dots[n].classList.add('is-active');
+    }
     current = n;
   }
 

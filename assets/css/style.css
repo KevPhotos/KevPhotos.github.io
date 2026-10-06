@@ -107,7 +107,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   border-color: var(--line);
 }
 .header.is-hidden { transform: translateY(-100%); }
-body.menu-open .header { transform: none; background: transparent; backdrop-filter: none; border-color: transparent; }
+body.menu-open .header { z-index: 220; transform: none; background: transparent; backdrop-filter: none; border-color: transparent; }
 
 .header__logo img { height: 38px; width: auto; }
 
@@ -224,8 +224,8 @@ body.menu-open .menu__foot { opacity: 1; }
 .btn--ghost:hover { border-color: #fff; }
 
 .hero__dots { position: absolute; right: var(--gutter); bottom: clamp(5.5rem, 14vh, 9rem); display: flex; flex-direction: column; gap: .6rem; }
-.hero__dots i { width: 3px; height: 26px; border-radius: 3px; background: rgba(255,255,255,.28); overflow: hidden; position: relative; }
-.hero__dots i.is-active::after { content: ''; position: absolute; inset: 0; background: var(--accent); transform-origin: 50% 0; animation: dot 5s linear forwards; }
+.hero__dots i { width: 3px; height: 20px; border-radius: 3px; background: rgba(255,255,255,.28); overflow: hidden; position: relative; }
+.hero__dots i.is-active::after { content: ''; position: absolute; inset: 0; background: var(--accent); transform-origin: 50% 0; animation: dot var(--hero-step, 5s) linear forwards; }
 @keyframes dot { from { transform: scaleY(0); } to { transform: scaleY(1); } }
 
 .hero__scroll {
@@ -358,7 +358,16 @@ body.menu-open .menu__foot { opacity: 1; }
   .cat--4 { grid-column: span 2; grid-row: span 1; }
   .cat__arrow { opacity: 1; transform: none; width: 38px; height: 38px; }
 
-  .hero__dots { display: none; }
+  .hero__dots {
+    right: var(--gutter); bottom: max(1.8rem, env(safe-area-inset-bottom));
+    flex-direction: row; gap: .4rem;
+  }
+  .hero__dots i { width: clamp(12px, 4vw, 18px); height: 3px; }
+  .hero__dots i.is-active::after {
+    transform-origin: 0 50%;
+    animation-name: dot-horizontal;
+  }
+  @keyframes dot-horizontal { from { transform: scaleX(0); } to { transform: scaleX(1); } }
   .model { flex-basis: 62vw; }
 }
 
